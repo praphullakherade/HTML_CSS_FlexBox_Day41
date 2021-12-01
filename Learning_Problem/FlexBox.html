@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <style>
+        body{
+            padding: 2em;
+        }
+        .headerContainer{
+            display: flex;
+            flex-flow: column wrap;
+            align-content: center;
+            background: tomato;
+            font-weight: bold;
+            padding: 10px;
+        }
+        .footerContainer{
+            display: flex;
+            flex-flow: column wrap;
+            align-content: center;
+            background: lightgreen;
+            font-weight: bold;
+            padding: 10px;
+        }
+        .mainContainer{
+            display: flex;
+            flex-flow: row wrap;
+            font-weight: bold;
+            text-align: center;
+        }
+        .mainContentItem{
+            text-align: left;
+            background: deepskyblue;
+        }
+        article{
+            padding: 10px;
+            margin: 10px;
+            background: aqua;
+        }
+        .sideBarLeftItem{
+            background: gold;
+        }
+        .sideBarRightItem{
+            background: hotpink;
+        }
+        .sideBarItem{
+            flex: 1 0 0;
+            border: 0px solid green;
+        }
+        .mainContentItem{
+            flex: 3 0px;
+        }
+        .sideBarLeftItem{
+            order: 1;
+        }
+        .mainContentItem{
+            order: 2;
+        }
+        .sideBarRightItem{
+            order: 3;
+        }
+    </style>
+</head>
+<body>
+    <header class="headerContainer">HEADER-Sample Flexbox Example</header>
+    <div class="mainContainer">
+        <section class="mainContentItem">
+            <article>
+                <h2>First Article</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae, ea, omnis quasi, eum quod non quis at eaque voluptatum cum ut enim explicabo a provident excepturi quam reprehenderit eveniet officiis.</p>
+            </article>
+            <article>
+                <h2>Second Article</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae laborum nulla repudiandae iusto omnis provident consectetur dolorum eaque cupiditate, laboriosam eius neque dolore sed quibusdam id saepe aliquam laudantium enim.</p>
+            </article>
+            <article>
+                <h3>Third Article</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam excepturi molestiae incidunt ad iusto veniam. Perspiciatis esse explicabo nulla ipsam eveniet, sunt voluptatum facilis corrupti distinctio voluptatibus reiciendis maxime quaerat?</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste mollitia et inventore maxime dolorum tempore perspiciatis quia magnam labore nam, minima ratione laudantium, repellendus ut ipsum in voluptates aliquid vero.</p>
+            </article>
+        </section>
+        <sidebar class="sideBarItem sideBarLeftItem">Left Side bar</sidebar>
+        <sidebar class="sideBarItem sideBarRightItem">Right Side BAr</sidebar>
+    </div>
+    <footer class="footerContainer">Footer</footer>
+</body>
+</html>
